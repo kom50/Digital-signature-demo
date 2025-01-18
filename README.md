@@ -2,7 +2,7 @@
 
 ### import modules and get public/private keys data
 
-```
+```js
 import crypto from 'crypto'
 import fs from 'fs'
 
@@ -13,7 +13,7 @@ const publicKey = fs.readFileSync('./public-key.key')
 
 
 ### How to create digital signature?
-```
+```js
 const ALGORITHM = 'RSA-SHA256'
 const data = "Hello"
 
@@ -28,7 +28,7 @@ var signature = signer.sign(privateKey, 'base64');`
 ```
 ### How to verify data with digital signature?
 
-```
+```js
 // Create a verifier object 
 var verifier = crypto.createVerify(ALGORITHM);
 
